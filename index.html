@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Company Profile - FLSPORTAINMENT</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%; /* Memastikan tinggi HTML dan body 100% */
+            margin: 0; /* Menghapus margin default */
+        }
+
+        body {
+            display: flex;
+            flex-direction: column; /* Mengatur orientasi konten menjadi kolom */
+        }
+
+        .content {
+            flex: 1; /* Membiarkan konten mengambil sisa ruang yang tersedia */
+        }
+
+        .bg-header {
+            background: url('fls1.png') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 60px 0;
+            height: 120vh; /* Set height to full viewport height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        footer {
+            background-color: #2c3e50; /* Warna latar belakang footer */
+            color: white; /* Warna teks footer */
+            padding: 20px 0; /* Padding vertikal */
+            text-align: center; /* Teks di tengah */
+        }
+
+        .content-section {
+            display: none; /* Hide all sections by default */
+        }
+
+        .navbar {
+            background-color: transparent; /* Membuat navbar transparan */
+            box-shadow: none; /* Menghilangkan bayangan pada navbar */
+            position: fixed; /* Memastikan navbar tetap di atas saat scroll */
+            top: 0; /* Menempatkan navbar di bagian atas halaman */
+            left: 0; /* Menempatkan navbar di sisi kiri */
+            width: 100%; /* Memastikan navbar memenuhi lebar layar */
+            z-index: 100; /* Agar navbar selalu berada di atas elemen lain */
+            transition: background-color 0.3s ease; /* Transisi saat mengubah warna */
+        }
+
+        /* Menambahkan efek saat navbar di-scroll */
+        .navbar.scrolled {
+            background-color: rgba(0, 0, 0, 0.8); /* Menambahkan warna latar saat scroll */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Memberikan bayangan */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">F L S</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showSection('homeSection')">Beranda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showSection('visiSection')">Visi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showSection('misiSection')">Misi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showSection('tentangKamiSection')">Tentang Kami</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showSection('kontakSection')">Kontak</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content">
+        <!-- Header (Home Section) -->
+        <section id="homeSection" class="bg-header">
+            <div class="container">
+                <h1 class="display-4">FLSPORTAINMENT</h1>
+            </div>
+        </section>
+
+        <!-- Visi Section -->
+        <section id="visiSection" class="content-section section-padding">
+            <div class="container">
+                <h2 class="text-center">Visi</h2>
+                <div class="card card-body">
+                    Menjadi penyelenggara event futsal terkemuka yang memberikan pengalaman kompetisi yang seru, profesional, dan berkelas bagi seluruh peserta, sekaligus mendorong kemajuan olahraga futsal di Indonesia.
+                </div>
+            </div>
+        </section>
+
+        <!-- Misi Section -->
+        <section id="misiSection" class="content-section section-padding">
+            <div class="container">
+                <h2 class="text-center">Misi</h2>
+                <div class="card card-body">
+                    <ul>
+                        <li>Menyediakan event futsal berkualitas dengan standar internasional.</li>
+                        <li>Menciptakan lingkungan kompetitif yang adil dan sportif.</li>
+                        <li>Memberikan pelayanan terbaik dengan fokus pada kepuasan peserta, penonton, dan sponsor.</li>
+                        <li>Meningkatkan minat masyarakat terhadap futsal melalui event yang menarik dan inovatif.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tentang Kami Section -->
+        <section id="tentangKamiSection" class="content-section section-padding">
+            <div class="container">
+                <h2 class="text-center">Tentang Kami</h2>
+                <div class="card card-body">
+                    FLSPORTAINMENT adalah perusahaan yang bergerak di bidang penyelenggaraan acara olahraga, khususnya futsal. Berdiri sejak tahun 2019, kami telah sukses mengadakan berbagai turnamen futsal tingkat regional dan nasional. 
+                    Dengan dukungan tim profesional dan fasilitas modern, kami siap membawa setiap kompetisi ke level yang lebih tinggi.
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontak Section -->
+        <section id="kontakSection" class="content-section section-padding">
+            <div class="container">
+                <h2 class="text-center">Kontak Kami</h2>
+                <div class="card card-body text-center">
+                    <p><strong>Telepon:</strong> <a href="tel:+6221567890">(021) 567-890</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@goalunited.com">info@flsportainment.com</a></p>
+                    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/ligafutsalflsportainment" target="_blank">@ligafutsalflsportainment</a></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 flsportainment. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript to Show Sections -->
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            var sections = document.querySelectorAll('.content-section, .bg-header');
+            sections.forEach(function(section) {
+                section.style.display = 'none';
+            });
+
+            // Show the clicked section
+            var selectedSection = document.getElementById(sectionId);
+            selectedSection.style.display = 'block';
+        }
+
+        // Show only the Home Section on load
+        document.addEventListener('DOMContentLoaded', function() {
+            showSection('homeSection');
+        });
+    </script>
+
+</body>
+</html>

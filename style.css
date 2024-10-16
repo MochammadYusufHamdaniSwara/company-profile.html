@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh; /* Memastikan body setidaknya setinggi viewport */
+    display: flex;
+    flex-direction: column;
+}
+
+
+.bg-header {
+background: url('fls1.png') no-repeat center center;
+background-size: cover;
+background-position: center 50%;
+color: white;
+padding: 60px 0;
+height: 120vh; /* Set height to full viewport height */
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+.section-padding {
+padding: 60px 0;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    position: relative; /* Ubah ini jika sebelumnya absolute */
+    clear: both; /* Menjamin footer muncul di bawah konten */
+    bottom: 0; /* Menempatkan footer di bawah */
+    width: 100%; /* Memastikan footer memenuhi lebar halaman */
+}
+
+.content-section {
+display: none; /* Hide all sections by default */
+}
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8); /* Menambahkan warna latar saat scroll */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Memberikan bayangan */
+}
+
